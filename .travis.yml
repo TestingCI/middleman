@@ -1,7 +1,10 @@
 language: ruby
 bundler_args: --without development
+
 rvm:
   - 2.2
 env: TEST=true
+
 before_install: git submodule update --init --recursive
+
 script: bundle exec rake test
